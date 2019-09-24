@@ -1,0 +1,236 @@
+:root{
+  --color-primary: #05668d;
+  --color-secondary: #427aa1;
+  --color-visited: #679436;
+  --color-shortest: #6699cc;
+  --color-wall: #2b2d42;
+  --color-white:#ebf2fa;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.72222;
+  color: #34495e;
+  background-color: #ffffff;
+}
+#board{
+  border-collapse:collapse
+}
+.panel {
+    position: fixed;
+    background-color:rgba(52,73,94,0.85);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    height:auto;
+    padding:10px;
+}
+
+.shortestPathNODIRECTION{
+  background:var(--color-sortest);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('circle.svg');
+}
+.finalCellNODIRECTION{
+  background:var(--color-sortest);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('circle.svg');
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* The Close Button */
+.close {
+    color: #3CE78B;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #3CE78B;
+    text-decoration: none;
+    cursor: pointer;
+}
+#innerDisplay{
+  height:50%
+}
+.monica{
+  width:50%;
+  float:left;
+}
+#mainText ul{
+  display:inline-block;
+  list-style:none
+}
+#mainText li{
+  display:inline-block;
+  list-style:none;
+  position:relative;
+  margin-right:25px
+}
+#mainText li > div{
+  display:inline-block;
+  height:25px;
+  width:25px;
+  margin:0 5px;
+  position:relative;
+  top: 6px;
+}
+#nextButton{
+  float:right
+}
+.finalCell{
+  background-image: url('circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.finalCellUP{
+
+  background:#3CE78B;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('triangletwo-up.svg')
+}
+.finalCellRIGHT{
+  background:#3CE78B;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('triangletwo-right.svg')
+}
+.finalCellDOWN{
+
+  background:var(--color-shortest);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('triangletwo-down.svg')
+}
+.finalCellLEFT{
+
+  background:var(--color-shortest);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('triangletwo-left.svg')
+}
+#board td{
+  width: 25px;
+  height: 25px;
+}
+@keyframes boardA{
+  50%{
+    transform:scale(0.5,0.5)
+  }
+}
+.explored{
+  background:var(--color-visited);
+  border: 1px solid var(--color-white);
+}
+.explored.object{
+  background:var(--color-secondary);
+  border: 1px solid var(--color-white);
+
+}
+.unexplored{
+border: 1px solid #ECF0F1
+
+}
+.unexplored.weight{
+  background-image:url('weight.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.explored.weight{
+  background:#2980B9;
+  border: 1px solid #3498DB;
+  background-image:url('weight.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wall{
+  background:var(--color-wall);
+  border: 1px solid var(--color-white);
+  animation-name: wallAnimation;
+  animation-duration:0.25s;
+}
+@keyframes wallAnimation {
+    50% {transform:scale(1.3)}
+    100% {transform:scale(1)}
+}
+
+.startingCell{
+  /*background:#3498DB;
+  border: 1px solid #3498DB;*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('start.svg')
+}
+.startingCell.shortestPath{
+  background:var(--color-shortest);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('start.svg');
+}
+.shortestPath{
+  background:var(--color-shortest);
+  border: 1px solid var(--color-white);
+}
+.shortestPath.explored.weight{
+  background:var(--color-shortest);
+  border: 1px solid var(--color-white);
+  background-image:url('weight.svg');
+}
+.shortestPathUP{
+  background:var(--color-shortest);
+  /*border: 1px solid #E74C3C;*/
+  background-image:url('triangletwo-up.svg')
+
+}
+.shortestPathRIGHT{
+  background:var(--color-shortest);
+  border: 1px solid var(--color-white);
+  background-image:url('triangletwo-right.svg')
+}
+.shortestPathDOWN{
+  background:var(--color-shortest);
+  border: 1px solid var(--color-white);
+  background-image:url('triangletwo-down.svg')
+}
+.shortestPathLEFT{
+  background:var(--color-shortest);
+  border: 1px solid var(--color-white);
+  background-image:url('triangletwo-left.svg')
+}
+.shortestPathNoDirection{
+  background:var(--color-shortest);
+  border: 1px solid var(--color-white);
+  background-image:url('triangletwo-left.svg')
+}
+
+
+a {
+  color: #16a085;
+  text-decoration: none;
+  -webkit-transition: .25s;
+          transition: .25s;
+}
+a:hover,
+a:focus {
+  color: #1abc9c;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel='stylesheet' href='css/index.css'/>
+    <title>Pathfinding Algorithms</title>
+</head>
+  <body>
+      <header id='navbarDiv'>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#" id='path'>Pathfinding Algorithms</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Choose an Algo
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+
+                    <li id='startButtonDFS'><a href="#" class='toggleColour'>Depth First Search (DFS)</a></li>
+                    <li id='startButtonBFS'><a href="#" class='toggleColour'>Breadth First Search (BFS)</a></li>
+                    <li id='startButtonRealAStar'><a href="#" class='toggleColour'>A* Search</a></li>
+                    <li id='startButtonDijkstra'><a href="#" class='toggleColour'>Dijkstra</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Generate a Maze
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li id='startButtonBasicMaze'><a href="#" class='toggleColour'>Basic Random Maze</a></li>
+                  <li id='startButtonBossMaze1'><a href="#" class='toggleColour'>Recursive Division Default</a></li>
+                  <li id='startButtonBossMaze2'><a href="#" class='toggleColour'>Recursive Division Horizontal Skew</a></li>
+                  <li id='startButtonBossMaze3'><a href="#" class='toggleColour'>Recursive Division Vertical Skew</a></li>
+                   <li id='startButtonBasicWeightMaze'><a href="#" class='toggleColour'>Basic Weight Maze</a></li>
+                </ul>
+              </li>
+              <li id='startButtonVisualise'><button class="btn btn-default navbar-btn" type="button" id='visualise'/>Visualise Algorithm</li>
+              <li id='startButtonClearWalls'><a href="#" class='toggleColour'>Clear Walls & Weights</a></li>
+              <li id='startButtonClearPath'><a href="#" class='toggleColour'>Clear Path</a></li>
+              <li id='startButtonClearPath'><a href="#" class='toggleColour'>Instruction/a></li>
+            </ul>
+
+          </div>
+        </nav>
+      </header>
+      <section>
+          <div id='mainText'>
+              <ul>
+                <li>
+                  <div class="startingCell"></div>Start Node</li>
+                <li>
+                  <div class="finalCell"></div>Target Node</li>
+                <li>
+                  <div class="unexplored weight"></div>Weight Node</li>
+                <li>
+                  <div class="unexplored"></div>Unvisited Node</li>
+                <li>
+                  <div class="explored"></div>Visited Nodes</li>
+                <li>
+                  <div class="shortestPath"></div>Shortest-path Node</li>
+                <li>
+                  <div class="wall"></div>Wall Node</li>
+              </ul>
+            </div>
+       
+           </div>
+           <table id='board'>
+             <tbody/>
+           </table>
+      </section>
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/index.min.js"></script>
+</html>

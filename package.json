@@ -1,0 +1,33 @@
+{
+  "name": "pathfinding-visualization",
+  "version": "1.0.0",
+  "description": "Pathfinding Algorithms visualization by Soul",
+  "main": "src/index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css",
+    "watch:sass": "node-sass sass/main.scss css/main.css -w",
+    "start": "webpack --watch",
+    "dev": "webpack-dev-server --progress --colors",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "Pathfinding",
+    "Breadth-First-Search",
+    "A*-Algorithm"
+  ],
+  "author": "Souleymane Dembele",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "uglifyjs-webpack-plugin": "^0.1.4",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
