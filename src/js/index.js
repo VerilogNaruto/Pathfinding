@@ -1,5 +1,5 @@
 /**
- * JavaScript Program By SOULEYMANE DEMBELE 09/23/2019
+ * JavaScript Programmed By SOULEYMANE DEMBELE 09/23/2019
  */
 
 import Maze from './Maze'

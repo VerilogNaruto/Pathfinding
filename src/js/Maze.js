@@ -1,5 +1,5 @@
 /**
- * JavaScript Program Modified By SOULEYMANE DEMBELE 09/23/2019
+ * JavaScript Programmed By SOULEYMANE DEMBELE 09/23/2019
  */
 class Maze {
     constructor(board,startNode,finalNode,mazeToDo,animate){
