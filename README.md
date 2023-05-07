@@ -1,5 +1,5 @@
 # Pathfinding
-Pathfinding Algorithms with visualization in JavaScript [Demo](https://naruto958.github.io/Pathfinding/).
+Pathfinding Algorithms with visualization in JavaScript [Demo](https://verilognaruto.github.io/Pathfinding/).
 
     nmp install or yarn
 ## Development
